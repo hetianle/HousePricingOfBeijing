@@ -1,0 +1,34 @@
+                  List of relations
+ Schema |          Name           |   Type   | Owner  
+--------+-------------------------+----------+--------
+ public | buses                   | table    | tianle
+ public | buses_houses            | table    | tianle
+ public | buses_houses_id_seq     | sequence | tianle
+ public | buses_id_seq            | sequence | tianle
+ public | hospitals               | table    | tianle
+ public | hospitals_houses        | table    | tianle
+ public | hospitals_houses_id_seq | sequence | tianle
+ public | hospitals_id_seq        | sequence | tianle
+ public | houses                  | table    | tianle
+ public | houses_id_seq           | sequence | tianle
+ public | schema_migrations       | table    | tianle
+ public | schools                 | table    | tianle
+ public | schools_houses          | table    | tianle
+ public | schools_houses_id_seq   | sequence | tianle
+ public | schools_id_seq          | sequence | tianle
+ public | shops                   | table    | tianle
+ public | shops_houses            | table    | tianle
+ public | shops_houses_id_seq     | sequence | tianle
+ public | shops_id_seq            | sequence | tianle
+ public | subways                 | table    | tianle
+ public | subways_houses          | table    | tianle
+ public | subways_houses_id_seq   | sequence | tianle
+ public | subways_id_seq          | sequence | tianle
+ public | users                   | table    | tianle
+ public | users_id_seq            | sequence | tianle
+ public | works                   | table    | tianle
+ public | works_houses            | table    | tianle
+ public | works_houses_id_seq     | sequence | tianle
+ public | works_id_seq            | sequence | tianle
+(29 rows)
+

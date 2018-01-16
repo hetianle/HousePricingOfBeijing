@@ -1,0 +1,185 @@
+</br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-bar-chart-o fa-fw"></i> 房价三维展示图
+  </div>
+  <div class="panel panel-body">
+    <div id="main1" style="width: 900px;height:500px;">   
+
+    <style>.embed-container {position: relative; padding-bottom: 58%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style>
+    <div class="embed-container">
+    <iframe width="300" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="房价数据热力图" src="//hetianle.maps.arcgis.com/apps/3DScene/index.html?appid=f0e76719e0cb4c21ac1c279b89189760">
+    </iframe>
+    </div>
+    </div>
+<%# <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.6/"></script>
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/SceneView",
+      "esri/layers/SceneLayer",
+      "esri/widgets/Legend",
+      "dojo/domReady!"
+    ], function(Map, SceneView, SceneLayer, Legend) {
+
+      // Create the renderer and configure visual variables
+      var renderer = {
+        type: "simple", // autocasts as new SimpleRenderer()
+        // Create default MeshSymbol3D for symbolizing SceneLayer
+        // a new FillSymbol3DLayer is created by default within the symbol
+        symbol: {
+          type: "mesh-3d"
+        },
+        visualVariables: [{
+          // specifies a visual variable of continuous color
+          type: "color",
+          // based on a field indicating the year a building was constructed
+          field: "CNSTRCT_YR",
+          legendOptions: {
+            title: "Construction year"
+          },
+          // color ramp from yellow to aqua blue
+          // buildings built between 1915 and 2015 will be
+          // assigned a color proportional to the min and max colors
+          // specified below
+          stops: [
+          {
+            value: 1915,
+            color: "#FBE789",
+            label: "before 1915"
+          },
+          {
+            value: 2015,
+            color: "#1B90A7",
+            label: "after 2015"
+          }]
+        }]
+      };
+
+      // Create SceneLayer and add to the map
+      var sceneLayer = new SceneLayer({
+        portalItem: {
+          id: "6fce72d1a3df4b309a317f1e2faae05e"
+        },
+        title: "New York City buildings",
+        renderer: renderer // Set the renderer to sceneLayer
+      });
+
+      // Create Map
+      var map = new Map({
+        basemap: "gray",
+        ground: "world-elevation",
+        layers: [sceneLayer]
+      });
+
+      // Create the SceneView and add the map
+      var view = new SceneView({
+        container: "main",
+        map: map,
+        camera: {
+          position: {
+            x: -8241124,
+            y: 4968029,
+            z: 580,
+            spatialReference: 3857
+          },
+          heading: 58,
+          tilt: 86
+        }
+      });
+
+      var legend = new Legend({
+        view: view
+      });
+      view.ui.add(legend, "bottom-right");
+    });
+  </script>
+
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+ %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# 
+
+<%# 
+
+<script>
+  var myChart = echarts.init(document.getElementById('main'));
+  var house_data = [];
+  $.ajax({
+    type: "GET",
+    url: "/houses/return_houses",
+    dataType: 'json',
+    success: function (data) {
+      myChart.hideLoading();
+
+      $.each(data, function (index, house) {
+        var each_house = [];
+        each_house.push(house.longitude, house.latitude);
+        house_data.push(each_house);
+      });
+
+      myChart.setOption({
+        visualMap: {
+          show: false,
+          top: 'top',
+          min: 0,
+          max: 5,
+          seriesIndex: 0,
+          calculable: true,
+          inRange: {
+            color: ['blue', 'blue', 'green', 'yellow', 'red']
+          }
+        },
+        bmap: {
+          center: [116.404, 39.915],
+          zoom: 12,
+          roam: true
+        },
+        series: [{
+          name: 'house',
+          type: 'heatmap',
+          coordinateSystem: 'bmap',
+          data: house_data,
+          symbolSize: 12,
+          pointSize: 6,
+          blurSize: 15
+        }]
+      });
+
+    },
+    error: function () {
+      alert('error')
+    },
+    timeout: function () {
+      alert('time out')
+    }
+  });
+
+
+</script>
+
+ <%# %>

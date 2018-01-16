@@ -1,0 +1,15 @@
+<div id="wrapper">
+  <div id="page-wrapper">
+
+    <% flash.each do |message_type, message| %>
+        <br>
+        <div class="alert alert-<%= message_type %>">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong> <%= message %></strong>
+        </div>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+</div>

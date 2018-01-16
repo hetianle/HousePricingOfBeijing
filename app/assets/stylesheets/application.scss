@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'metisMenu.min';
+@import 'morris.scss';
+@import 'sb-admin-2.min.scss';
+@import 'font-awesome';
+
+//.alert-alert {
+//  @extend .alert-warning;
+//}
+//
+//.alert-notice {
+//  @extend .alert-info;
+//}
+//
+//.table-striped > tbody > tr:hover >td.has_hover {
+//    background-color: #C0C0C0;
+//}
+//
+body {
+  //padding-top: 50px;
+  padding-bottom: 30px;
+}
+//
+////http://stackoverflow.com/questions/22887548/css-stretching-background-image-to-100-width-and-height-of-screen/
+//html {
+//  height: 100%
+//}
+//
+//.body-background {
+//  background-repeat: no-repeat;
+//  background-size: 100% 100%;
+//  background-image: url('background.jpg');
+//}
+//
+//
+//.dropdown-menu {
+//  min-width: 0px !important;
+//}
+//
+//footer {
+//  background-color: #555;
+//  color: white;
+//  padding: 10px;
+//}
+//
+//.navbar-header > a > img {
+//  padding-top:10px
+//}
+//
+//.nav >li>a {
+//  padding-top:20px
+//}
+//
+//.navbar-text{
+//  padding-top:5px
+//}
+//
+//.button_to {
+//  display: inline;
+//}
+//
+
+
+.modal-header h4{
+  background-color: #5cb85c;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.modal-header {
+  background-color: #5cb85c;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+#filter-header .modal-header{
+  background-color: #C0C0C0;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+#filter-header h4{
+  background-color: #C0C0C0;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+#login-dp{
+  min-width: 300px;
+  padding: 14px 14px 0;
+  overflow:hidden;
+  background-color:rgba(255,255,255,.8);
+}
+
+#login-dp .help-block{
+  font-size:12px
+}
+
+#login-dp .bottom{
+  background-color:rgba(255,255,255,.8);
+  border-top:1px solid #ddd;
+  clear:both;
+  padding:14px;
+}
+#login-dp .social-buttons{
+  margin:12px 0
+}
+#login-dp .social-buttons a{
+  width: 49%;
+}
+#login-dp .form-group {
+  margin-bottom: 10px;
+}
+.btn-fb{
+  color: #fff;
+  background-color:#3b5998;
+}
+.btn-fb:hover{
+  color: #fff;
+  background-color:#496ebc
+}
+.btn-tw{
+  color: #fff;
+  background-color:#55acee;
+}
+.btn-tw:hover{
+  color: #fff;
+  background-color:#59b5fa;
+}
+
+@media(max-width:768px){
+  #login-dp{
+    background-color: inherit;
+    color: #fff;
+  }
+  #login-dp .bottom{
+    background-color: inherit;
+    border-top:0 none;
+  }
+}
+
