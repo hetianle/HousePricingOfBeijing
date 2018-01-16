@@ -1,6 +1,7 @@
 # HousePricingOfBeijing
 
 HousePricingOfBeijing是一个基于SOA架构的北京丝房价地理信息系统，提供北京市海量房源数据的位置信息和属性信息的空间可视化展示，房源位置、属性及其周边的查询筛选，包括每一处房源周边重要的基础设施（学校、公交车站、地铁站、医院、商业写字楼）等购房者最为关心的内容。
+系统现托管至heroku上：https://secret-crag-96471.herokuapp.com/
 
 
 ### 面向用户(买房者、卖房者)
