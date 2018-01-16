@@ -19,25 +19,25 @@ HousePricingOfBeijing是一个基于SOA架构的北京丝房价地理信息系�
 
 
 ### 系统开发说明
-
-    1. 在房价网站上利用爬虫爬下当前所有房子的价格和基本信息（房型、面积、楼层、建造时间等）
+   
+   1. 在房价网站上利用爬虫爬下当前所有房子的价格和基本信息（房型、面积、楼层、建造时间等）
   
-    1. 利用 arcgis online service 将爬虫下来的数据发布生成图层服务（房屋图层、公交车站图层、地铁站图层、写字楼图层、医院图层、学校图层、商场图层）等，并使用美观的地图符号对各种地理实体进行标记。
+   2. 利用 arcgis online service 将爬虫下来的数据发布生成图层服务（房屋图层、公交车站图层、地铁站图层、写字楼图层、医院图层、学校图层、商场图层）等，并使用美观的地图符号对各种地理实体进行标记。
 
-    1. 在三维场景中对房屋信息进行可视化展示，丰富UI界面。
+   3. 在三维场景中对房屋信息进行可视化展示，丰富UI界面。
     
-    1. 利用 arcgis online service 发布各种空间分析服务（如房屋查询、周边查询等），实现与房屋交易相关的主要数据分析功能。 
+   4. 利用 arcgis online service 发布各种空间分析服务（如房屋查询、周边查询等），实现与房屋交易相关的主要数据分析功能。 
 
-    1. 建立 rails 开发框架，设计系统主要架构和前端UI布局，并将 arcgis online service 集成到 rails 应用中。
+   5. 建立 rails 开发框架，设计系统主要架构和前端UI布局，并将 arcgis online service 集成到 rails 应用中。
   
 
 ## 开发
 
-    1. 原始数据由[scrapy-hoursepricing](https://github.com/PENGZhaoqing/scrapy-hoursepricing)爬取，数据抓取后先存为CSV文件，然后导入到arcgis online service 云端数据库中发布成图层服务。
+   1. 原始数据由[scrapy-hoursepricing](https://github.com/PENGZhaoqing/scrapy-hoursepricing)爬取，数据抓取后先存为CSV文件，然后导入到arcgis online service 云端数据库中发布成图层服务。
     
-    2. 再arcgis online 云端，建立空间查询和数据分析等先关应用，并发布成服务。
+   2. 再arcgis online 云端，建立空间查询和数据分析等先关应用，并发布成服务。
     
-    3. 运用 ruby on rails 框架建立web应用程序，设计系统界面和UI布局，并集成 arcgis online 云端的服务。
+   3. 运用 ruby on rails 框架建立web应用程序，设计系统界面和UI布局，并集成 arcgis online 云端的服务。
     
     
 ## 系统安装说明
