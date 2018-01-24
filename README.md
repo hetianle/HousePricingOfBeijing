@@ -4,6 +4,12 @@ HousePricingOfBeijing是一个基于SOA架构的北京丝房价地理信息系�
 
 系统现托管至heroku上：https://secret-crag-96471.herokuapp.com/
 
+系统演示视频：
+
+爱奇艺 http://www.iqiyi.com/w_19rwbaxgf1.html 
+
+YouTube https://youtu.be/3LWJsicOjXk
+
 
 ### 面向用户(买房者、卖房者)
 
