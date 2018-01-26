@@ -8,7 +8,7 @@ HousePricingOfBeijing是一个基于SOA架构的北京丝房价地理信息系�
 
 爱奇艺 http://www.iqiyi.com/w_19rwbaxgf1.html 
 
-YouTube https://youtu.be/3LWJsicOjXk
+YouTube https://www.youtube.com/watch?v=3LWJsicOjXk&t=27s
 
 
 ### 面向用户(买房者、卖房者)
